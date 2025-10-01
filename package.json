@@ -1,27 +1,47 @@
 {
-  "name": "reactfine-ui",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.4.1"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
-    "eslint": "^9",
-    "eslint-config-next": "15.4.1",
-    "@eslint/eslintrc": "^3"
-  }
+	"name": "reactfine-ui",
+	"version": "0.1.0",
+	"description": "My personal react ui library",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"keywords": [
+		"reactfine",
+		"ui",
+		"component",
+		"components",
+		"library"
+	],
+	"author": {
+		"name": "Akmaljon Muhammadjonov",
+		"email": "info@akmaldev.uz",
+		"url": "https://akmaldev.uz"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@types/react-syntax-highlighter": "^15.5.13",
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.525.0",
+		"next": "15.4.1",
+		"react": "^19.1.1",
+		"react-code-blocks": "^0.1.6",
+		"react-dom": "^19.1.1",
+		"react-syntax-highlighter": "^15.6.6",
+		"tailwind-merge": "^3.3.1"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"eslint": "^9",
+		"eslint-config-next": "15.4.1",
+		"reactfine-ui": "^1.0.37",
+		"tailwindcss": "^4.1.11"
+	}
 }
