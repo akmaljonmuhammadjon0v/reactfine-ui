@@ -1,5 +1,7 @@
 import { ArrowRight, Code2, Layers, Palette } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from 'reactfine-ui';
+import Footer from '../_components/footer/footer';
 
 const componentShowcases = [
 	{
@@ -7,16 +9,16 @@ const componentShowcases = [
 		description: 'Variants, states, and icons with one config.',
 		preview: (
 			<div className='flex flex-wrap gap-3'>
-				<button className='rounded-full bg-gray-700 px-5 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(15,23,42,0.15)] transition hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(15,23,42,0.18)]'>
+				<Button variant='dark' rounded='full'>
 					Primary
-				</button>
-				<button className='rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-[0_6px_25px_rgba(15,23,42,0.08)] transition hover:-translate-y-0.5 hover:border-slate-400'>
+				</Button>
+				<Button variant='secondary' rounded='full'>
 					Secondary
-				</button>
-				<button className='flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900 shadow-[0_6px_25px_rgba(15,23,42,0.12)] transition hover:-translate-y-0.5'>
+				</Button>
+				<Button variant='outline' rounded='full' className=''>
 					<ArrowRight className='h-4 w-4' />
-					Ghost
-				</button>
+					Outline
+				</Button>
 			</div>
 		),
 	},
@@ -93,13 +95,13 @@ const features = [
 ];
 
 function App() {
+	const footerContent = (
+		<span>
+			© {new Date().getFullYear()} ReactFine UI. Crafted for product teams.
+		</span>
+	);
 	return (
 		<main className='relative min-h-screen bg-[#F7F6F3] text-slate-900'>
-			<div className='pointer-events-none absolute inset-0 overflow-hidden'>
-				<div className='absolute left-1/2 top-0 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-gradient-to-b from-slate-100 to-transparent blur-3xl' />
-				<div className='absolute right-[-12rem] bottom-[-16rem] h-[36rem] w-[36rem] rounded-full bg-gradient-to-t from-slate-200 to-transparent blur-3xl' />
-			</div>
-
 			<div className='relative mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-24 px-6 pb-24 pt-16 sm:px-10 lg:px-16'>
 				<header className='flex flex-1 flex-col items-center justify-center text-center'>
 					<span className='inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 shadow-[0_12px_40px_rgba(15,23,42,0.1)]'>
@@ -177,26 +179,7 @@ function App() {
 					))}
 				</section>
 			</div>
-
-			<footer className='border-t border-slate-200/60 bg-white/70 backdrop-blur-md'>
-				<div className='mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:px-10 lg:px-16'>
-					<span>
-						© {new Date().getFullYear()} ReactFine UI. Crafted for product
-						teams.
-					</span>
-					<nav className='flex flex-wrap items-center gap-4 text-sm font-medium text-slate-600'>
-						<a className='transition hover:text-slate-900' href='#'>
-							GitHub
-						</a>
-						<a className='transition hover:text-slate-900' href='#'>
-							Documentation
-						</a>
-						<a className='transition hover:text-slate-900' href='#'>
-							License
-						</a>
-					</nav>
-				</div>
-			</footer>
+			<Footer content={footerContent} />
 		</main>
 	);
 }

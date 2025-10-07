@@ -14,7 +14,7 @@ export default function ButtonPage() {
 			prop: 'size',
 			type: 'string',
 			default: 'md',
-			description: 'Button size (small, default, large, icon)',
+			description: 'Button size (sm, md, lg, icon)',
 		},
 		{
 			prop: 'disabled',
@@ -32,7 +32,7 @@ export default function ButtonPage() {
 			prop: 'rounded',
 			type: 'string',
 			default: 'md',
-			description: 'Button rounded (sm, default, lg, full)',
+			description: 'Button rounded (sm, md, lg, full)',
 		},
 		{
 			prop: 'className',
@@ -44,15 +44,14 @@ export default function ButtonPage() {
 			prop: 'focus',
 			type: 'string',
 			default: 'primary',
-			description:
-				'Button focus (primary, secondary, danger, success, outline, dark)',
+			description: 'Button focus',
 		},
 	];
 	return (
-		<div className='text-black'>
+		<div className=''>
 			<div>
 				<p className='text-2xl font-semibold pb-3'>Button</p>
-				<p className='text-[#4b5563]  text-base'>
+				<p className='text-[#4b5563] dark:text-gray-300 text-base'>
 					A versatile button component with multiple variants, sizes, and states
 					for user interactions.
 				</p>
@@ -63,11 +62,12 @@ export default function ButtonPage() {
 					<Card
 						rounded='md'
 						width='md'
-						className='max-w-4xl flex justify-center gap-5 p-5 py-6'
+						className='max-w-4xl flex flex-wrap justify-center gap-5 p-5 py-6'
 					>
 						<Button variant='primary'>Primary</Button>
 						<Button variant='secondary'>Secondary</Button>
 						<Button variant='outline'>Outline</Button>
+						<Button variant='warning'>Warning</Button>
 						<Button variant='danger'>Danger</Button>
 						<Button variant='success'>Succes</Button>
 						<Button variant='dark'>Dark</Button>
@@ -99,13 +99,13 @@ function App() {
 				<div className='pt-4'>
 					<Card
 						rounded='lg'
-						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
+						className='max-w-4xl flex flex-wrap flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
 						<h4 className='text-xl font-medium'>Sizes</h4>
-						<div className='p-3 flex gap-4 pl-0 items-center'>
-							<Button size='small'>Small</Button>
-							<Button size='default'>Medium</Button>
-							<Button size='large'>Large</Button>
+						<div className='p-3 flex flex-wrap gap-4 pl-0 items-center'>
+							<Button size='sm'>Small</Button>
+							<Button size='md'>Medium</Button>
+							<Button size='lg'>Large</Button>
 							<Button size='icon'>Icon</Button>
 						</div>
 					</Card>
@@ -116,7 +116,7 @@ function App() {
 						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
 						<h4 className='text-xl font-medium'>States</h4>
-						<div className='p-3 flex gap-4 pl-0 items-center'>
+						<div className='p-3 flex flex-wrap gap-4 pl-0 items-center'>
 							<Button>Normal</Button>
 							<Button disabled={true}>Disabled</Button>
 							<Button loading>Loading</Button>
@@ -129,9 +129,9 @@ function App() {
 						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
 						<h4 className='text-xl font-medium'>Rounded</h4>
-						<div className='p-3 flex gap-4 pl-0 items-center'>
+						<div className='p-3 flex flex-wrap gap-4 pl-0 items-center'>
 							<Button rounded='sm'>sm</Button>
-							<Button rounded='default'>md</Button>
+							<Button rounded='md'>md</Button>
 							<Button rounded='lg'>lg</Button>
 							<Button rounded='full'>Full</Button>
 						</div>

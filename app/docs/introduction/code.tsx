@@ -7,7 +7,7 @@ interface CodeBlockProps {
 	code: string;
 	title: string;
 }
-const CodeBlock = ({ code, title }: CodeBlockProps) => {
+const CodeBlockIntroduction = ({ code, title }: CodeBlockProps) => {
 	const [copied, setCopied] = useState(false);
 
 	const copyToClipboard = async () => {
@@ -21,11 +21,11 @@ const CodeBlock = ({ code, title }: CodeBlockProps) => {
 	};
 
 	return (
-		<div className='bg-white rounded-lg shadow-lg max-w-4xl overflow-hidden border border-gray-200'>
+		<div className='bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200'>
 			{/* Header */}
 			<div className='bg-[#F9FAFB] text-black border-b border-gray-200 px-4 py-3 flex items-center justify-between'>
 				<div className='flex items-center space-x-3'>
-					<span className='text-sm font-medium'>{title}</span>
+					<span className='text-sm font-medium text-[#374151]'>{title}</span>
 				</div>
 				<button
 					onClick={copyToClipboard}
@@ -44,7 +44,6 @@ const CodeBlock = ({ code, title }: CodeBlockProps) => {
 						style={atomOneLight}
 						customStyle={{ margin: 0, background: 'transparent' }}
 						wrapLongLines={true}
-						showLineNumbers={true}
 						lineNumberStyle={{
 							color: '#6B7280',
 							fontSize: '0.75rem',
@@ -60,4 +59,4 @@ const CodeBlock = ({ code, title }: CodeBlockProps) => {
 	);
 };
 
-export default CodeBlock;
+export default CodeBlockIntroduction;

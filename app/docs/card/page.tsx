@@ -48,16 +48,22 @@ export default function CardPage() {
 			prop: 'align',
 			type: 'string',
 			default: 'left',
-			description: 'Card rounded (sm, default, lg, full)',
+			description: 'CardFooter item Position (left, center, right)',
+		},
+		{
+			prop: 'as',
+			type: 'string',
+			default: 'h3',
+			description: 'CardTitle as element (h1, h2, h3, h4, h5, h6)',
 		},
 	];
 	return (
-		<div className='text-black'>
+		<div className=''>
 			<div>
 				<p className='text-2xl font-semibold pb-3'>Card</p>
-				<p className='text-[#4b5563]  text-base'>
-					A versatile button component with multiple variants, sizes, and states
-					for user interactions.
+				<p className='text-[#4b5563] dark:text-gray-300 text-base'>
+					A versatile card component with a variety of styles and options for
+					different use cases.
 				</p>
 			</div>
 			<div className='py-5'>
@@ -132,7 +138,7 @@ function App() {
 						rounded='lg'
 						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
-						<h4 className='text-xl font-medium'>Start</h4>
+						<h4 className='text-xl dark:text-black font-medium'>Start</h4>
 						<div className='p-3 flex gap-4 pl-0 items-center'>
 							<Card shadow='md' hoverable rounded='lg' className='text-start'>
 								<CardHeader>
@@ -159,7 +165,7 @@ function App() {
 						rounded='lg'
 						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
-						<h4 className='text-xl font-medium'>Center</h4>
+						<h4 className='text-xl font-medium dark:text-black'>Center</h4>
 						<div className='p-3 flex gap-4 pl-0 items-center'>
 							<Card shadow='md' hoverable rounded='lg' className='text-center'>
 								<CardHeader>
@@ -186,7 +192,7 @@ function App() {
 						rounded='lg'
 						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
-						<h4 className='text-xl font-medium'>End</h4>
+						<h4 className='text-xl font-medium dark:text-black'>End</h4>
 						<div className='p-3 flex gap-4 pl-0 items-center'>
 							<Card shadow='md' hoverable rounded='lg' className='text-end'>
 								<CardHeader>
@@ -213,7 +219,7 @@ function App() {
 						rounded='lg'
 						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
-						<h4 className='text-xl font-medium'>Card Image</h4>
+						<h4 className='text-xl font-medium dark:text-black'>Card Image</h4>
 						<div className='p-3 flex gap-4 pl-0 items-center'>
 							<Card shadow='md' hoverable rounded='lg'>
 								<CardHeader className='h-48 relative'>
@@ -240,12 +246,12 @@ function App() {
 						</div>
 					</Card>
 				</div>
-				<div className='py-7'>
+				<div className='pb-7'>
 					<Card
 						rounded='lg'
 						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
-						<h4 className='text-xl font-medium'>Card Size</h4>
+						<h4 className='text-xl font-medium dark:text-black'>Card Size</h4>
 						<div className='p-3 grid gap-4 pl-0 items-center'>
 							<Card shadow='md' width='xs' hoverable rounded='lg'>
 								<CardHeader className='h-48 relative'>
