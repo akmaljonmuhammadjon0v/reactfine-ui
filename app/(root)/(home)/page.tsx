@@ -96,7 +96,7 @@ const features = [
 
 function App() {
 	const footerContent = (
-		<span>
+		<span className='text-sm text-slate-600'>
 			© {new Date().getFullYear()} ReactFine UI. Crafted for product teams.
 		</span>
 	);

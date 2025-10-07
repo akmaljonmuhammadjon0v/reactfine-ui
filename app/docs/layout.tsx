@@ -3,10 +3,15 @@ import Sidebar from '@/components/shared/Sidebar';
 import type React from 'react';
 import Footer from '../(root)/_components/footer/footer';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Reactfine UI - Docs',
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	const footerContent = (
-		<div className='text-base flex items-center gap-2 font-bold text-[#111827] dark:text-white '>
+		<div className='text-base flex items-center gap-2 font-bold text-[#111827] dark:text-white z-10'>
 			<div className='w-6 h-6 relative'>
 				<Image fill src='/logo.png' alt='Logo' className='object-contain' />
 			</div>

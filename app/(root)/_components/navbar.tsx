@@ -6,7 +6,7 @@ import Link from 'next/link';
 function Navbar({ title }: SidebarProps) {
 	return (
 		<>
-			<div className='w-full h-16 flex fixed bg-white top-0 items-center'>
+			<div className='w-full h-16 flex fixed bg-white top-0 z-0 items-center'>
 				<div className='flex items-center w-full h-full px-24 dark:bg-black dark:text-white text-black border-b border-b-[#E5E7EB] dark:!border-gray-700 justify-between'>
 					<div className='text-xl flex items-center gap-1 font-bold dark:text-white relative'>
 						<div className='relative w-6 h-6'>

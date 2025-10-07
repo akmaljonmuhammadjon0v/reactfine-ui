@@ -1,7 +1,5 @@
 import Navbar from '@/app/(root)/_components/navbar';
-
 import type React from 'react';
-import Footer from './_components/footer/footer';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	return (

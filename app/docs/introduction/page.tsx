@@ -36,6 +36,19 @@ export default function Introduction() {
 						title='Install with npm'
 						code={`npm install reactfine-ui lucide-react tailwindcss`}
 					/>
+					<div className='pt-8'>
+						<div className='flex gap-3 !items-center'>
+							<Image src='/code.png' alt='Logo' width={35} height={35} />
+							<p className='text-[#111827] text-xl font-semibold'>Import CSS</p>
+						</div>
+						<p className='dark:text-gray-300 text-base pb-4 pt-1'>
+							Import the components you need:
+						</p>
+						<CodeBlockIntroduction
+							title='Component'
+							code={`import 'reactfine-ui/dist/index.css';`}
+						/>
+					</div>
 				</div>
 			</div>
 

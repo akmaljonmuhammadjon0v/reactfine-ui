@@ -7,9 +7,12 @@ export default function Installation() {
 	return (
 		<div className='text-[#475569]'>
 			<div className='max-w-4xl'>
-				<p className='text-3xl text-[#0F172A] dark:text-white font-semibold pb-3'>
-					Installation
-				</p>
+				<div className='flex gap-3 !items-center'>
+					<Image src='/code.png' alt='Logo' width={35} height={35} />
+					<p className='text-2xl sm:text-3xl text-[#0F172A] dark:text-white font-semibold pb-4'>
+						Installation
+					</p>
+				</div>
 				<p className='dark:text-gray-300 text-base'>
 					Get started with ReactUI by installing the package using your
 					preferred package manager. The library is designed to work <br />
@@ -30,9 +33,13 @@ export default function Installation() {
 						rounded='lg'
 						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
-						<h4 className='text-xl font-semibold text-[#0F172A]'>
-							Peer Dependencies
-						</h4>
+						<div className='flex gap-3 !items-center'>
+							<Image src='/bluecode.png' alt='Logo' width={20} height={20} />
+							<p className='text-xl text-[#0F172A] dark:text-white font-semibold'>
+								Peer Dependencies
+							</p>
+						</div>
+
 						<div className='p-2 pl-0 flex flex-col gap-4 items-center'>
 							<p>
 								ReactUI requires the following peer dependencies to be installed
