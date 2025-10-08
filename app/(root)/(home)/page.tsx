@@ -101,7 +101,7 @@ function App() {
 		</span>
 	);
 	return (
-		<main className='relative min-h-screen bg-[#F7F6F3] text-slate-900'>
+		<main className='relative !overflow-hidden min-h-screen bg-[#F7F6F3] text-slate-900 '>
 			<div className='relative mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-24 px-6 pb-24 pt-16 sm:px-10 lg:px-16'>
 				<header className='flex flex-1 flex-col items-center justify-center text-center'>
 					<span className='inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 shadow-[0_12px_40px_rgba(15,23,42,0.1)]'>
@@ -146,7 +146,7 @@ function App() {
 						{componentShowcases.map(component => (
 							<article
 								key={component.name}
-								className='flex flex-col gap-5 rounded-3xl border border-slate-100 bg-slate-50/60 p-6 shadow-[0_18px_65px_rgba(15,23,42,0.09)]'
+								className='flex flex-col gap-5 rounded-3xl border border-slate-100 bg-slate-50/60 p-6 shadow-[0_18px_65px_rgba(15,23,42,0.09)] !w-full max-w-sm sm:max-w-md max-sm:w-md:max-w-lg'
 							>
 								<div>
 									<h3 className='text-lg font-semibold text-slate-900'>
