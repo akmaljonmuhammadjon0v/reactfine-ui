@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 		</div>
 	);
 	return (
-		<div className='h-screen overflow-x-hidden relative flex !flex-col md:flex-row w-full text-white'>
+		<div className='h-screen relative flex !flex-col md:flex-row w-full text-white'>
 			{' '}
 			<div className='fixed top-0 left-0 w-full z-50'>
 				{' '}
@@ -35,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 				{/* Main Content */}{' '}
 				<div className='flex justify-center items-center bg-background my-auto w-full px-4 py-8'>
 					{' '}
-					<div className='w-full h-auto max-w-5xl px-6 rounded-md dark:!text-white text-[#111827]'>
+					<div className='w-full h-auto max-w-5xl px-6 rounded-md dark:!text-white text-[#111827] overflow-x-hidden '>
 						{' '}
 						{children}{' '}
 					</div>{' '}
