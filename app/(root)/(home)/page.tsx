@@ -15,7 +15,7 @@ const componentShowcases = [
 				<Button variant='secondary' rounded='full'>
 					Secondary
 				</Button>
-				<Button variant='outline' rounded='full' className=''>
+				<Button variant='outline' rounded='full'>
 					<ArrowRight className='h-4 w-4' />
 					Outline
 				</Button>
@@ -26,7 +26,7 @@ const componentShowcases = [
 		name: 'Cards',
 		description: 'Composable layouts with Tailwind utility presets.',
 		preview: (
-			<div className='grid w-full max-w-xs gap-3'>
+			<div className='grid w-full gap-3'>
 				<div className='rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_40px_rgba(15,23,42,0.08)]'>
 					<p className='text-xs uppercase tracking-[0.28em] text-slate-400'>
 						Overview
@@ -52,7 +52,7 @@ const componentShowcases = [
 		name: 'Inputs',
 		description: 'Form primitives with validation-friendly patterns.',
 		preview: (
-			<div className='w-full max-w-sm space-y-3'>
+			<div className='w-full space-y-3'>
 				<label className='flex flex-col gap-1 rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_10px_40px_rgba(15,23,42,0.08)]'>
 					<span className='text-xs font-semibold uppercase tracking-[0.24em] text-slate-500'>
 						API KEY
@@ -100,16 +100,18 @@ function App() {
 			© {new Date().getFullYear()} ReactFine UI. Crafted for product teams.
 		</span>
 	);
+
 	return (
-		<main className='relative !overflow-hidden min-h-screen bg-[#F7F6F3] text-slate-900 '>
-			<div className='relative mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-24 px-6 pb-24 pt-16 sm:px-10 lg:px-16'>
+		<main className='relative min-h-screen overflow-x-hidden bg-[#F7F6F3] text-slate-900'>
+			<div className='relative mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-24 px-5 sm:px-8 lg:px-16 pb-24 pt-20'>
+				{/* HERO */}
 				<header className='flex flex-1 flex-col items-center justify-center text-center'>
 					<span className='inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 shadow-[0_12px_40px_rgba(15,23,42,0.1)]'>
 						React UI Toolkit
 					</span>
-					<div className='mt-6 max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl'>
+					<p className='mt-6 max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl'>
 						ReactFine UI
-					</div>
+					</p>
 					<p className='mt-5 max-w-2xl text-base text-slate-600 sm:text-lg'>
 						A curated collection of production-ready React components crafted
 						for teams who value clarity, velocity, and delightful developer
@@ -132,21 +134,22 @@ function App() {
 					</div>
 				</header>
 
-				<section className='rounded-[2.5rem] border border-slate-100 bg-white/80 p-8 shadow-[0_25px_80px_rgba(15,23,42,0.08)] backdrop-blur-md sm:p-10 lg:p-14'>
+				{/* COMPONENT SHOWCASE */}
+				<section className='rounded-[2.5rem] border border-slate-100 bg-white/80 p-6 sm:p-10 lg:p-14 shadow-[0_25px_80px_rgba(15,23,42,0.08)] backdrop-blur-md'>
 					<div className='mx-auto max-w-3xl text-center'>
-						<div className='text-2xl mb-3 font-semibold sm:text-3xl'>
+						<h2 className='text-2xl sm:text-3xl font-semibold mb-3'>
 							Crafted components
-						</div>
-						<p className=' text-base text-slate-600 sm:text-lg'>
+						</h2>
+						<p className='text-base text-slate-600 sm:text-lg'>
 							Slot-driven primitives with sensible spacing, accessible states,
 							and polished UI tokens.
 						</p>
 					</div>
-					<div className='mt-10 grid gap-12 lg:grid-cols-3'>
+					<div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{componentShowcases.map(component => (
 							<article
 								key={component.name}
-								className='flex flex-col gap-5 rounded-3xl border border-slate-100 bg-slate-50/60 p-6 shadow-[0_18px_65px_rgba(15,23,42,0.09)] !w-full max-w-sm sm:max-w-md max-sm:w-md:max-w-lg'
+								className='flex flex-col gap-5 rounded-3xl border border-slate-100 bg-slate-50/60 p-6 shadow-[0_18px_65px_rgba(15,23,42,0.09)] w-full'
 							>
 								<div>
 									<h3 className='text-lg font-semibold text-slate-900'>
@@ -164,7 +167,8 @@ function App() {
 					</div>
 				</section>
 
-				<section className='grid gap-8 rounded-[2.5rem] border border-slate-100 bg-white/60 p-8 shadow-[0_25px_90px_rgba(15,23,42,0.08)] backdrop-blur-md sm:p-10 lg:grid-cols-3 lg:gap-10 lg:p-14'>
+				{/* FEATURES */}
+				<section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 rounded-[2.5rem] border border-slate-100 bg-white/60 p-6 sm:p-10 lg:p-14 shadow-[0_25px_90px_rgba(15,23,42,0.08)] backdrop-blur-md'>
 					{features.map(({ icon: Icon, title, description }) => (
 						<div
 							key={title}
@@ -179,6 +183,7 @@ function App() {
 					))}
 				</section>
 			</div>
+
 			<Footer content={footerContent} />
 		</main>
 	);
