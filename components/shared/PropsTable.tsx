@@ -10,7 +10,7 @@ interface PropsTableProps {
 const PropsTable = ({ propsData }: PropsTableProps) => {
 	return (
 		<div className='max-w-4xl'>
-			<div className='bg-white rounded-lg border shadow-sm overflow-hidden'>
+			<div className='bg-white overflow-x-auto rounded-lg border shadow-sm overflow-hidden'>
 				<table className='w-full'>
 					<thead className='bg-gray-50 border-b border-gray-200'>
 						<tr>
@@ -43,7 +43,7 @@ const PropsTable = ({ propsData }: PropsTableProps) => {
 								<td className='px-6 py-4 text-sm text-gray-600 font-mono rounded'>
 									{item.default}
 								</td>
-								<td className='px-6 py-4 text-sm text-gray-700'>
+								<td className='px-6 py-4 sm:text-xs max-sm:text-xs md:text-sm text-gray-700'>
 									{item.description}
 								</td>
 							</tr>
