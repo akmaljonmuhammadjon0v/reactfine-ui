@@ -105,7 +105,6 @@ function Navbar({ title }: SidebarProps) {
 							<Link
 								key={link.href}
 								href={link.href}
-								target='_blank'
 								className='rounded-md px-3 py-0 hover:bg-gray-100 dark:hover:bg-gray-800'
 								onClick={() => setOpen(false)}
 							>

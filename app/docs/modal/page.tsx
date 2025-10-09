@@ -173,7 +173,7 @@ export default function App() {
 						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
 					>
 						<h4 className='text-xl font-medium'>Modal Image</h4>
-						<div className='p-3 pl-0 flex gap-4 items-center'>
+						<div className='p-3 pl-0 flex gap-4 items-center justify-center'>
 							<Card width='md' className='p-4 relative'>
 								<ModalTitle>Welcome to My Modal 🎉</ModalTitle>
 								<ModalContent>
