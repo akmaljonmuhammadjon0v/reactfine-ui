@@ -137,9 +137,9 @@ function App() {
 				{/* COMPONENT SHOWCASE */}
 				<section className='rounded-[2.5rem] border border-slate-100 bg-white/80 p-6 sm:p-10 lg:p-14 shadow-[0_25px_80px_rgba(15,23,42,0.08)] backdrop-blur-md'>
 					<div className='mx-auto max-w-3xl text-center'>
-						<h2 className='text-2xl sm:text-3xl font-semibold mb-3'>
+						<div className='text-2xl sm:text-3xl font-semibold mb-3'>
 							Crafted components
-						</h2>
+						</div>
 						<p className='text-base text-slate-600 sm:text-lg'>
 							Slot-driven primitives with sensible spacing, accessible states,
 							and polished UI tokens.
