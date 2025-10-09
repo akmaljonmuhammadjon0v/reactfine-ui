@@ -3,6 +3,7 @@ import React from 'react';
 import CodeBlock from '@/components/shared/CodeBlock';
 import PropsTable from '@/components/shared/PropsTable';
 import { MailIcon } from 'lucide-react';
+
 export default function InputPage() {
 	const propsData = [
 		{
@@ -66,158 +67,181 @@ export default function InputPage() {
 			description: 'Additional CSS classes to apply',
 		},
 	];
+
 	return (
-		<div className=''>
+		<div className='px-4 sm:px-6 md:px-10 lg:px-20'>
+			{/* Header */}
 			<div>
-				<p className='text-2xl font-semibold pb-3'>Input</p>
-				<p className='text-[#4b5563] dark:text-gray-300 text-base'>
+				<p className='text-2xl md:text-3xl font-semibold pb-3'>Input</p>
+				<p className='text-[#4b5563] dark:text-gray-300 text-sm md:text-base max-w-2xl'>
 					A versatile input component with various styles and options for
 					different use cases.
 				</p>
 			</div>
-			<div className='py-5'>
+
+			{/* Preview */}
+			<div className='py-6'>
 				<h4 className='text-xl font-semibold'>Preview</h4>
 				<div className='py-4'>
 					<Card
 						rounded='md'
 						width='md'
-						className='max-w-4xl flex flex-wrap items-center justify-center gap-4 p-5 py-6'
+						className='w-full max-w-4xl flex flex-wrap justify-center gap-4 p-4 sm:p-6'
 					>
-						<Input placeholder='Search...' size='md' />
+						<Input
+							placeholder='Search...'
+							size='md'
+							className='w-full sm:w-1/2 md:w-1/3'
+						/>
 					</Card>
 				</div>
 			</div>
-			<div className='pb-5'>
+
+			{/* Usage */}
+			<div className='pb-6'>
 				<h4 className='text-xl font-semibold'>Usage</h4>
 				<div className='pt-4'>
 					<CodeBlock
-						title={'Input.jsx'}
+						title='Input.jsx'
 						code={`import { Input } from 'reactfine-ui';
 function App() {
   return ( 
-   <Input
-	 label='Email'
-	 placeholder='you@example.com'
-	 helperText='Yaxshi formatda kiriting'
-	 error=''
-	 type='email'
-	 size='md'
-	 startIcon={<MailIcon className='w-4 h-4' />}
-	/>
+    <Input
+      label='Email'
+      placeholder='you@example.com'
+      helperText='Yaxshi formatda kiriting'
+      error=''
+      type='email'
+      size='md'
+      startIcon={<MailIcon className='w-4 h-4' />}
+    />
   );
 }`}
 					/>
 				</div>
 			</div>
-			<div className='py-5'>
+
+			{/* Props Table */}
+			<div className='py-6'>
 				<h4 className='text-xl font-semibold'>Props</h4>
-				<div className='pt-4'>
+				<div className='pt-4 overflow-x-auto'>
 					<PropsTable propsData={propsData} />
 				</div>
 			</div>
-			<div className='py-5'>
+
+			{/* Examples */}
+			<div className='py-6'>
 				<h4 className='text-xl font-semibold'>Examples</h4>
+
+				{/* Sizes */}
 				<div className='py-4 dark:text-black'>
-					<Card
-						rounded='lg'
-						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
-					>
-						<h4 className='text-xl font-medium'>Sizes</h4>
-						<div className='p-3 flex gap-4 pl-0 items-center'>
-							<Input placeholder='Size SM' error='' type='email' size='sm' />
-							<Input placeholder='Size MD' error='' type='email' size='md' />
-							<Input placeholder='Size LG' error='' type='email' size='lg' />
-						</div>
-					</Card>
-				</div>
-				<div className='pt-4 dark:text-black'>
-					<Card
-						rounded='lg'
-						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
-					>
-						<h4 className='text-xl font-medium'>Icon</h4>
-						<div className='p-3 pl-0 flex gap-4 items-center'>
+					<Card className='w-full max-w-4xl flex flex-col gap-5 p-5 sm:p-6'>
+						<h4 className='text-lg md:text-xl font-medium'>Sizes</h4>
+						<div className='flex flex-wrap gap-4'>
 							<Input
-								placeholder='you@example.com'
-								label='Start Icon'
-								error=''
+								placeholder='Size SM'
 								type='email'
-								size='md'
-								startIcon={<MailIcon className='w-4 h-4' />}
+								size='sm'
+								className='w-full sm:w-[48%] md:w-[30%]'
 							/>
 							<Input
-								placeholder='you@example.com'
-								label='End Icon'
-								error=''
+								placeholder='Size MD'
 								type='email'
 								size='md'
-								endIcon={<MailIcon className='w-4 h-4' />}
+								className='w-full sm:w-[48%] md:w-[30%]'
+							/>
+							<Input
+								placeholder='Size LG'
+								type='email'
+								size='lg'
+								className='w-full sm:w-[48%] md:w-[30%]'
 							/>
 						</div>
 					</Card>
 				</div>
 
-				<div className='py-7 dark:text-black'>
-					<Card
-						rounded='lg'
-						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
-					>
-						<h4 className='text-xl font-medium'>Label</h4>
-						<div className='p-3 flex gap-4 pl-0 items-center'>
+				{/* Icon */}
+				<div className='pt-4 dark:text-black'>
+					<Card className='w-full max-w-4xl flex flex-col gap-5 p-5 sm:p-6'>
+						<h4 className='text-lg md:text-xl font-medium'>Icon</h4>
+						<div className='flex flex-wrap gap-4'>
 							<Input
-								label='Email'
 								placeholder='you@example.com'
-								error=''
+								label='Start Icon'
 								type='email'
 								size='md'
 								startIcon={<MailIcon className='w-4 h-4' />}
+								className='w-full sm:w-[48%]'
+							/>
+							<Input
+								placeholder='you@example.com'
+								label='End Icon'
+								type='email'
+								size='md'
+								endIcon={<MailIcon className='w-4 h-4' />}
+								className='w-full sm:w-[48%]'
 							/>
 						</div>
 					</Card>
 				</div>
+
+				{/* Label */}
+				<div className='py-7 dark:text-black'>
+					<Card className='w-full max-w-4xl flex flex-col gap-5 p-5 sm:p-6'>
+						<h4 className='text-lg md:text-xl font-medium'>Label</h4>
+						<div className='flex flex-wrap gap-4'>
+							<Input
+								label='Email'
+								placeholder='you@example.com'
+								type='email'
+								size='md'
+								startIcon={<MailIcon className='w-4 h-4' />}
+								className='w-full sm:w-[48%]'
+							/>
+						</div>
+					</Card>
+				</div>
+
+				{/* Helper Text */}
 				<div className='pb-7 dark:text-black'>
-					<Card
-						rounded='lg'
-						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
-					>
-						<h4 className='text-xl font-medium'>Helper Text</h4>
-						<div className='p-3 flex gap-4 pl-0 items-center'>
+					<Card className='w-full max-w-4xl flex flex-col gap-5 p-5 sm:p-6'>
+						<h4 className='text-lg md:text-xl font-medium'>Helper Text</h4>
+						<div className='flex flex-wrap gap-4'>
 							<Input
 								label='Email'
 								placeholder='you@example.com'
 								helperText='Yaxshi formatda kiriting'
-								error=''
 								type='email'
 								size='md'
 								startIcon={<MailIcon className='w-4 h-4' />}
+								className='w-full sm:w-[48%]'
 							/>
 						</div>
 					</Card>
 				</div>
+
+				{/* Disabled */}
 				<div className='pb-7 dark:text-black'>
-					<Card
-						rounded='lg'
-						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
-					>
-						<h4 className='text-xl font-medium'>Disabled</h4>
-						<div className='p-3 flex gap-4 pl-0 items-center'>
+					<Card className='w-full max-w-4xl flex flex-col gap-5 p-5 sm:p-6'>
+						<h4 className='text-lg md:text-xl font-medium'>Disabled</h4>
+						<div className='flex flex-wrap gap-4'>
 							<Input
 								placeholder='you@example.com'
 								type='email'
 								size='md'
 								disabled
 								startIcon={<MailIcon className='w-4 h-4' />}
+								className='w-full sm:w-[48%]'
 							/>
 						</div>
 					</Card>
 				</div>
+
+				{/* Validation */}
 				<div className='pb-7 dark:text-black'>
-					<Card
-						rounded='lg'
-						className='max-w-4xl flex flex-col justify-start gap-5 p-5 pl-6 py-6'
-					>
-						<h4 className='text-xl font-medium'>Validation</h4>
-						<div className='p-3 flex gap-4 pl-0 items-center'>
+					<Card className='w-full max-w-4xl flex flex-col gap-5 p-5 sm:p-6'>
+						<h4 className='text-lg md:text-xl font-medium'>Validation</h4>
+						<div className='flex flex-wrap gap-4'>
 							<Input
 								placeholder='you@example.com'
 								helperText='Yaxshi formatda kiriting'
@@ -225,6 +249,7 @@ function App() {
 								type='email'
 								size='md'
 								startIcon={<MailIcon className='w-4 h-4' />}
+								className='w-full sm:w-[48%]'
 							/>
 						</div>
 					</Card>

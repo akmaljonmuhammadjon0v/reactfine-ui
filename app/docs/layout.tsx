@@ -33,7 +33,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 					<Sidebar />{' '}
 				</div>{' '}
 				{/* Main Content */}{' '}
-				<div className='flex justify-center items-center bg-background my-auto w-full px-4 py-8'>
+				<div className='flex justify-center items-center bg-background my-auto w-full md:px-4 sm:px-1 py-8'>
 					{' '}
 					<div className='w-full h-auto max-w-5xl px-6 rounded-md dark:!text-white text-[#111827] overflow-x-hidden '>
 						{' '}
