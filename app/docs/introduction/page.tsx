@@ -77,7 +77,7 @@ export default function Introduction() {
 
 						<CodeBlockIntroduction
 							title='Component'
-							code={`import { Button, Card, Input } from 'reactline-ui'
+							code={`import { Button, Card, Input } from 'reactfine-ui'
 
 export default function HomePage() {
   return (
